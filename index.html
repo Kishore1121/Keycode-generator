@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keycode Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <div class="container">
+            <div class="key">
+                <h1>Pressed  key</h1>
+                <h2>H</h2>
+            </div>
+            <div class="keycode">
+                <h1>Key code</h1>
+                <h2>34</h2>
+            </div>
+        </div>
+    </section>
+    <div class="home">
+        <h2>Press any key to start</h2>
+    </div>
+
+
+    <script>
+        const displaykey = document.querySelector('.key h2')
+        const displaykeycode = document.querySelector('.keycode h2')
+        const homedisplay = document.querySelector('.home')
+
+        window.addEventListener('keydown',(e)=>{
+            console.log(homedisplay);
+            homedisplay.classList.add('active')
+            displaykey.innerText=e.key;
+            displaykeycode.innerText=e.keyCode
+            console.log(e);
+
+            if (e.keyCode===32) {
+                displaykey.innerText=`Space`;
+            }
+        })
+
+    </script>
+</body>
+</html>
